@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Advent Devotional</title>
+<meta name="description" content="A daily Advent devotional: light the wreath, hear the day’s verse, and read a short reflection from the Appalachian hills. From Heartstrings Studio.">
+<meta name="theme-color" content="#120E1F">
+<meta property="og:title" content="Advent Devotional — Heartstrings Studio">
+<meta property="og:description" content="One verse, one short devotional, one candle at a time — from the first Sunday of Advent to New Year’s Day.">
+<meta property="og:image" content="https://heartstringsstudio.github.io/advent/img/og.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Advent">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="hero" id="hero">
+  <img class="hero-bg" src="img/hero.webp" alt="" onerror="this.remove()">
+  <svg class="sky" id="sky" aria-hidden="true"></svg>
+  <div class="snow" id="snow" aria-hidden="true"></div>
+  <svg class="ridges" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 70 C40 52 70 60 105 46 S170 30 210 44 S290 26 330 40 S380 50 400 42 V120 H0Z" fill="var(--ridge1)"/>
+    <path d="M0 92 C50 76 95 86 140 72 S220 62 265 76 S350 66 400 74 V120 H0Z" fill="var(--ridge2)"/>
+    <path d="M0 108 C70 98 130 104 200 98 S330 94 400 100 V120 H0Z" fill="var(--ridge3)"/>
+  </svg>
+  <div class="hero-inner">
+    <div class="toprow">
+      <span class="pill" id="pill">Advent</span>
+      <span class="daycount" id="daycount"></span>
+    </div>
+    <p class="date" id="date"></p>
+    <div class="wreath-wrap">
+      <div class="glow" id="glow"></div>
+      <svg id="wreath" class="wreath" viewBox="0 0 400 300" role="img" aria-label="Advent wreath"></svg>
+    </div>
+    <div class="candle-key" id="candleKey"></div>
+    <p class="candle-note" id="candleNote" aria-live="polite"></p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="before" class="card before" hidden>
+    <div class="kicker">Advent begins</div>
+    <h2 id="countTitle">Sunday, November 29</h2>
+    <p class="sub" id="countSub"></p>
+    <div class="actions"><button class="btn btn-accent" id="peekBtn">Read Day 1 now</button></div>
+  </section>
+
+  <article id="today" class="card today" hidden>
+    <div class="kicker" id="kicker"></div>
+    <h1 class="title" id="title"></h1>
+    <figure class="verse">
+      <blockquote id="verse"></blockquote>
+      <figcaption id="ref"></figcaption>
+    </figure>
+    <div class="actions">
+      <button class="btn btn-accent" id="playBtn" aria-pressed="false"><span class="ico" id="playIco">▶</span> <span id="playLabel">Hear the verse</span></button>
+      <button class="btn btn-outline" id="shareBtn"><span class="ico">↗</span> Share</button>
+    </div>
+    <div class="devo" id="devo"></div>
+    <div class="prayer"><div class="prayer-label">Pray</div><p id="prayer"></p></div>
+    <nav class="daynav" aria-label="Other days">
+      <button class="btn btn-ghost" id="prevBtn">‹ <span id="prevLabel">Yesterday</span></button>
+      <button class="btn btn-ghost" id="todayBtn" hidden>Today</button>
+      <button class="btn btn-ghost" id="nextBtn"><span id="nextLabel">Tomorrow</span> ›</button>
+    </nav>
+  </article>
+
+  <section class="install card" id="install" hidden>
+    <h3>Keep it on your home screen</h3>
+    <p class="sub" id="installText"></p>
+    <button class="btn btn-accent" id="installBtn" hidden>Install app</button>
+  </section>
+
+  <footer class="foot">
+    <p>A daily Advent devotional from <strong>Heartstrings Studio</strong> — songs and stories from the West Virginia hills.</p>
+    <p class="small">Scripture from the King James Version. Same verse each morning as the <a href="https://heartstringsstudio.github.io/alarm/">Daily Verse Alarm</a>.</p>
+  </footer>
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<audio id="audio" preload="none"></audio>
+<script src="app.js"></script>
+</body>
+</html>
