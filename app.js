@@ -234,7 +234,7 @@ function render(animate){
     $('daycount').textContent='';
     $('date').textContent=prettyDate(todayISO());
     $('countTitle').textContent=n===1?'Advent begins tomorrow':'Advent begins in '+n+' days';
-    $('countSub').textContent='Come back Sunday, November 29, to light the first candle. Each day brings one verse — the same one the Daily Verse Alarm plays that morning — and a short devotional from the hills.';
+    $('countSub').textContent='Come back Sunday, November 29, to light the first candle. Each day brings one verse and a short devotional from the hills.';
     $('before').hidden=false; $('today').hidden=true;
     return;
   }
