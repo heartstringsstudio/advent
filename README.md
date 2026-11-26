@@ -2,7 +2,7 @@
 
 An installable phone app (PWA) from Heartstrings Studio. Each day you get the Advent wreath (one more candle lit every Sunday, and the Christ candle on Christmas Eve), then that day's verse read aloud, then a short devotional and a one-line prayer.
 
-**Season:** Sunday, Nov 29, 2026 through Friday, Jan 1, 2027. That's 34 days, using the same verse each morning as the [Daily Verse Alarm](https://heartstringsstudio.github.io/alarm/). The verse narration MP3s are copied from the alarm's `2026-advent` pack, verses 05–38.
+**Season:** Sunday, Nov 29, 2026 through Friday, Jan 1, 2027. That's 34 days, one verse each.
 
 | Week | Dates | Wreath |
 |---|---|---|
